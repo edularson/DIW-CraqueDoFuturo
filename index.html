@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolinha de Futebol Craques do Futuro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="main.html">
+                    <img src="images/logo.png" alt="Logo Craques do Futuro">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="#beneficios">Sobre Nós</a></li>
+                    <li><a href="#turmas">Nossas Turmas</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Inscreva-se</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <label class="tema-switch" aria-label="Alternar tema">
+                    <input type="checkbox" id="tema-toggle-checkbox">
+                    <span class="slider"></span>
+                </label>
+                <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Desperte o Craque Dentro do Seu Filho!</h2>
+                <p>Formando atletas e cidadãos desde 2010. Matrículas abertas para todas as idades!</p>
+                <a href="#contato" class="btn">Inscreva-se Agora</a>
+            </div>
+        </section>
+
+        <section id="beneficios" class="beneficios">
+            <div class="container">
+                <h2>Por que escolher nossa escolinha?</h2>
+                <div class="beneficios-grid">
+                    <div class="beneficio">
+                        <div class="icon">🏃</div>
+                        <h3>Desenvolvimento Físico</h3>
+                        <p>Atividades adaptadas para cada faixa etária, promovendo coordenação motora e condicionamento físico.</p>
+                    </div>
+                    <div class="beneficio">
+                        <div class="icon">🤝</div>
+                        <h3>Trabalho em Equipe</h3>
+                        <p>Aprendizado de valores como cooperação, respeito e espírito esportivo.</p>
+                    </div>
+                    <div class="beneficio">
+                        <div class="icon">🏆</div>
+                        <h3>Técnica e Tática</h3>
+                        <p>Treinamento profissional com foco no desenvolvimento técnico e tático do futebol.</p>
+                    </div>
+                    <div class="beneficio">
+                        <div class="icon">❤️</div>
+                        <h3>Ambiente Seguro</h3>
+                        <p>Espaço adequado e profissionais qualificados para garantir a segurança dos alunos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="turmas" class="turmas">
+            <div class="container">
+                <h2>Nossas Turmas</h2>
+                <div class="turmas-tabs">
+                    <button class="tab-btn active" data-turma="iniciantes">Iniciantes (5-8 anos)</button>
+                    <button class="tab-btn" data-turma="intermediarios">Intermediários (9-12 anos)</button>
+                    <button class="tab-btn" data-turma="avancados">Avançados (13-16 anos)</button>
+                </div>
+                <div class="turma-content active" id="iniciantes">
+                    <h3>Turma Iniciantes</h3>
+                    <p>Foco em diversão e primeiros contatos com a bola. Desenvolvimento motor e socialização.</p>
+                    <ul>
+                        <li>Terças e Quintas: 15h às 16h</li>
+                        <li>Sábados: 9h às 10h30</li>
+                    </ul>
+                </div>
+                <div class="turma-content" id="intermediarios">
+                    <h3>Turma Intermediários</h3>
+                    <p>Aprimoramento técnico e introdução aos conceitos táticos do futebol.</p>
+                    <ul>
+                        <li>Terças e Quintas: 16h às 17h30</li>
+                        <li>Sábados: 10h30 às 12h</li>
+                    </ul>
+                </div>
+                <div class="turma-content" id="avancados">
+                    <h3>Turma Avançados</h3>
+                    <p>Treinamento tático avançado e preparação para competições.</p>
+                    <ul>
+                        <li>Segundas, Quartas e Sextas: 17h30 às 19h</li>
+                        <li>Sábados: 14h às 16h</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="depoimentos">
+            <div class="container">
+                <h2>O que dizem sobre nós</h2>
+        
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn prev" aria-label="Depoimento anterior">‹</button>
+        
+                    <div class="depoimentos-slider">
+                        <div class="depoimento">
+                            <p>"Meu filho está na escolinha há 2 anos e a evolução dele foi incrível, não só no futebol, mas também na disciplina e no trabalho em equipe."</p>
+                            <div class="autor">
+                                <strong>Carlos Silva</strong>
+                                <span>Pai do Pedro, 10 anos</span>
+                            </div>
+                        </div>
+                        <div class="depoimento">
+                            <p>"Os professores são muito atenciosos e sabem como motivar as crianças. Minha filha adora as aulas!"</p>
+                            <div class="autor">
+                                <strong>Ana Oliveira</strong>
+                                <span>Mãe da Júlia, 8 anos</span>
+                            </div>
+                        </div>
+                        <div class="depoimento">
+                            <p>"Ambiente seguro e profissional. Recomendo para quem busca uma formação séria, mas sem perder a diversão."</p>
+                            <div class="autor">
+                                <strong>Roberto Mendes</strong>
+                                <span>Pai do Lucas, 14 anos</span>
+                            </div>
+                        </div>
+                         <div class="depoimento">
+                            <p>"A estrutura é fantástica e a metodologia de ensino é moderna. Meu filho nunca falta a um treino!"</p>
+                            <div class="autor">
+                                <strong>Fernanda Costa</strong>
+                                <span>Mãe do Matheus, 12 anos</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <button class="carousel-btn next" aria-label="Próximo depoimento">›</button>
+                </div>
+        
+                <div class="estatisticas">
+                    <div class="estatistica">
+                        <span class="numero">500+</span>
+                        <span class="legenda">Alunos formados</span>
+                    </div>
+                    <div class="estatistica">
+                        <span class="numero">15</span>
+                        <span class="legenda">Anos de experiência</span>
+                    </div>
+                    <div class="estatistica">
+                        <span class="numero">12</span>
+                        <span class="legenda">Professores qualificados</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2>Faça a Pré-Inscrição Agora!</h2>
+                <p>Preencha o formulário abaixo e entraremos em contato para mais informações.</p>
+                <form id="formulario-contato">
+                    <div class="form-group">
+                        <label for="nome-responsavel">Nome do Responsável*</label>
+                        <input type="text" id="nome-responsavel" name="nome-responsavel" required>
+                        <span class="erro"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome-aluno">Nome do Aluno*</label>
+                        <input type="text" id="nome-aluno" name="nome-aluno" required>
+                        <span class="erro"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade do Aluno*</label>
+                        <input type="number" id="idade" name="idade" min="5" max="16" required>
+                        <span class="erro"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                        <span class="erro"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="erro"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (opcional)</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Pré-Inscrição</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h2>Craques do Futuro</h2>
+                    <p>Formando atletas e cidadãos desde 2010</p>
+                </div>
+                <div class="footer-contato">
+                    <h3>Contato</h3>
+                    <p>Rua dos Esportes, 123 - Centro</p>
+                    <p>Tel: (XX) XXXX-XXXX</p>
+                    <p>Email: contato@craquesdofuturo.com.br</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Escolinha de Futebol Craques do Futuro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+        <button id="voltar-topo" aria-label="Voltar ao topo">↑</button>
+    </footer>
+</body>
+</html>
