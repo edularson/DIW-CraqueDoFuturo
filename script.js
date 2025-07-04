@@ -1,7 +1,5 @@
-// Aguardar o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- FUNCIONALIDADE DE TEMA ---
     const temaToggleCheckbox = document.getElementById('tema-toggle-checkbox');
     
     function aplicarTema(tema) {
@@ -76,9 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (sliderContainer && btnPrev && btnNext) {
         btnNext.addEventListener('click', () => {
-            // clientWidth inclui o padding, que é o ideal aqui
             const slideWidth = sliderContainer.querySelector('.depoimento').clientWidth;
-            // Adicionamos a margem (10px * 2) para um cálculo mais preciso
             sliderContainer.scrollLeft += slideWidth + 20; 
         });
 
@@ -194,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (value.length > 2) {
                 value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
             }
-            if (value.length > (value.includes('9', 5) ? 10 : 9) ) { // Adapta para 8 ou 9 dígitos no corpo
+            if (value.length > (value.includes('9', 5) ? 10 : 9) ) {
                 value = `${value.slice(0, -4)}-${value.slice(-4)}`;
             }
             e.target.value = value;

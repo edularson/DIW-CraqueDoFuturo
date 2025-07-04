@@ -17,21 +17,9 @@ O site tem como objetivo divulgar a escolinha, apresentar suas turmas, benefíci
 
 ## 🖥️ Tecnologias Utilizadas
 
-- **HTML5** — estrutura semântica da página
-- **CSS3** — estilização, layout e responsividade
+- **HTML** — estrutura semântica da página
+- **CSS** — estilização, layout e responsividade
 - **JavaScript** — interatividade (carrossel, alternância de tema, menu mobile)
-- **Google Fonts** — tipografia customizada (Roboto)
-
-## 📂 Estrutura de Arquivos
-
-```plaintext
-/
-├── index.html              # Página principal do site
-├── style.css               # Estilos do site
-├── script.js               # Scripts de interatividade
-├── images/                 # Imagens (ex: logo)
-└── README.md               # Documentação do projeto
-````
 
 ## 📌 Páginas / Seções
 

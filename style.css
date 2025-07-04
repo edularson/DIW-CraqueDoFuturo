@@ -1,29 +1,29 @@
 /* Estilos Gerais */
 :root {
-  /* MODO CLARO - Paleta "Clássico e Confiável" */
-  --cor-primaria: #2A9D8F;      /* Verde Grama */
-  --cor-secundaria: #264653;   /* Verde/Azul Escuro para detalhes */
-  --cor-destaque: #E76F51;      /* Laranja Vibrante para Ações */
-  --cor-texto: #212529;         /* Cinza Escuro (quase preto) */
-  --cor-fundo: #F8F9FA;         /* Branco Gelo */
-  --cor-fundo-alt: #FFFFFF;     /* Branco Puro para cards e seções */
-  --cor-borda: #DEE2E6;         /* Cinza Claro para bordas */
-  --cor-texto-sobre-primaria: #FFFFFF; /* Texto branco para usar sobre fundos verdes/laranjas */
+  /* MODO CLARO */
+  --cor-primaria: #2A9D8F;
+  --cor-secundaria: #264653;
+  --cor-destaque: #E76F51;
+  --cor-texto: #212529;
+  --cor-fundo: #F8F9FA;
+  --cor-fundo-alt: #FFFFFF;
+  --cor-borda: #DEE2E6;
+  --cor-texto-sobre-primaria: #FFFFFF;
   
   --fonte-principal: 'Roboto', sans-serif;
   --transicao: all 0.3s ease;
   --sombra: rgba(0, 0, 0, 0.08);
 }
 
-/* MODO ESCURO - Paleta "Clássico e Confiável" */
+/* MODO ESCURO */
 body.dark-mode {
-  --cor-primaria: #34C3B2;      /* Verde Grama (mais claro para contraste) */
-  --cor-secundaria: #84E2D8;   /* Verde secundário mais claro */
-  --cor-destaque: #F4A261;      /* Laranja/Amarelo para Ações */
-  --cor-texto: #E9ECEF;         /* Branco Acinzentado */
-  --cor-fundo: #1B263B;         /* Azul-Marinho Escuro */
-  --cor-fundo-alt: #2a3a52;     /* Tom mais claro do fundo para cards */
-  --cor-borda: #495057;         /* Cinza Escuro para bordas */
+  --cor-primaria: #34C3B2;
+  --cor-secundaria: #84E2D8;
+  --cor-destaque: #F4A261;
+  --cor-texto: #E9ECEF;
+  --cor-fundo: #1B263B;
+  --cor-fundo-alt: #2a3a52;
+  --cor-borda: #495057;
   --cor-texto-sobre-primaria: #1B263B;
   
   --sombra: rgba(0, 0, 0, 0.2);
@@ -293,9 +293,28 @@ input:checked + .slider:before {
 }
 
 .beneficio .icon {
-  font-size: 3rem;
-  color: var(--cor-primaria);
-  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-fundo-alt);
+}
+
+.beneficio .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.beneficio:hover .icon img {
+  transform: scale(1.1);
 }
 
 /* Seção de Turmas */
