@@ -9,7 +9,6 @@
   --cor-fundo-alt: #FFFFFF;
   --cor-borda: #DEE2E6;
   --cor-texto-sobre-primaria: #FFFFFF;
-  
   --fonte-principal: 'Roboto', sans-serif;
   --transicao: all 0.3s ease;
   --sombra: rgba(0, 0, 0, 0.08);
@@ -25,7 +24,8 @@ body.dark-mode {
   --cor-fundo-alt: #2a3a52;
   --cor-borda: #495057;
   --cor-texto-sobre-primaria: #1B263B;
-  
+  --fonte-principal: 'Roboto', sans-serif;
+  --transicao: all 0.3s ease;
   --sombra: rgba(0, 0, 0, 0.2);
 }
 
@@ -38,6 +38,7 @@ body.dark-mode {
 
 html {
   scroll-behavior: smooth;
+  /* scroll mais suave pra nao ficar muito travado*/
 }
 
 body {
@@ -54,7 +55,8 @@ body {
   padding: 0 15px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2,
+h3 {
   margin-bottom: 1rem;
   line-height: 1.2;
   color: var(--cor-secundaria);
@@ -172,7 +174,7 @@ nav ul.menu li a:hover::after {
 }
 
 /* Estilos para os botões da direita */
-.header-right {
+.header-direita {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -219,11 +221,11 @@ nav ul.menu li a:hover::after {
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: var(--cor-primaria);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(24px);
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>');
 }
@@ -274,6 +276,7 @@ input:checked + .slider:before {
 .beneficios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* para a responsividade */
   gap: 30px;
 }
 
@@ -319,8 +322,9 @@ input:checked + .slider:before {
 
 /* Seção de Turmas */
 .turmas {
-    background-color: var(--cor-fundo);
+  background-color: var(--cor-fundo);
 }
+
 .turmas h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -345,7 +349,8 @@ input:checked + .slider:before {
   color: var(--cor-texto);
 }
 
-.tab-btn.active, .tab-btn:hover {
+.tab-btn.active,
+.tab-btn:hover {
   background-color: var(--cor-primaria);
   color: var(--cor-texto-sobre-primaria);
   border-color: var(--cor-primaria);
@@ -387,22 +392,22 @@ input:checked + .slider:before {
 }
 
 .estatisticas {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 3rem;
 }
 
 .estatistica {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .estatistica .numero {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--cor-primaria);
-    display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  display: block;
 }
 
 /* Estilos do Carrossel de Depoimentos */
@@ -544,8 +549,8 @@ footer {
 }
 
 body.dark-mode footer {
-    background-color: #111827;
-    color: var(--cor-texto);
+  background-color: #111827;
+  color: var(--cor-texto);
 }
 
 .footer-info {
@@ -555,13 +560,14 @@ body.dark-mode footer {
   margin-bottom: 40px;
 }
 
-.footer-info h2, .footer-info h3 {
+.footer-info h2,
+.footer-info h3 {
   color: var(--cor-primaria);
 }
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 30px;
 }
 
 .social-links a {
@@ -572,13 +578,12 @@ body.dark-mode footer {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  color: white;
   transition: var(--transicao);
 }
 
 body.dark-mode .social-links a {
-    background-color: var(--cor-fundo-alt);
-    color: var(--cor-texto);
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
 }
 
 .social-links a:hover {
@@ -595,7 +600,7 @@ body.dark-mode .social-links a {
 }
 
 body.dark-mode .copyright {
-    border-top: 1px solid var(--cor-borda);
+  border-top: 1px solid var(--cor-borda);
 }
 
 #voltar-topo {
@@ -627,64 +632,68 @@ body.dark-mode .copyright {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+  /* serve pro botao do voltar sumir qnd chegar la no começo */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 992px) {
-  .main-nav {
-      display: none;
-  }
 
   .menu-toggle {
-      display: block;
+    display: block;
   }
 
   nav ul.menu {
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      background-color: var(--cor-fundo);
-      box-shadow: 0 5px 10px var(--sombra);
-      padding: 10px 0;
-      gap: 0;
-      display: none;
-      z-index: 999;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    box-shadow: 0 5px 10px var(--sombra);
+    padding: 10px 0;
+    gap: 0;
+    display: none;
+    z-index: 999;
   }
-  
+
   nav ul.menu.active {
-      display: flex;
+    display: flex;
   }
-  
+
   nav ul.menu li a {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--cor-borda);
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-borda);
   }
-    
+
   nav ul.menu li:last-child a {
-      border-bottom: none;
+    border-bottom: none;
   }
-    
+
   nav ul.menu li a::after {
-      display: none;
+    display: none;
   }
-  
+
   section {
-      padding: 60px 0;
+    padding: 60px 0;
   }
-  
+
   .hero {
-      padding: 120px 0 80px;
+    padding: 120px 0 80px;
   }
-  
+
   .hero h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
@@ -696,42 +705,42 @@ body.dark-mode .copyright {
 
 @media (max-width: 576px) {
   header .container {
-      height: 70px;
+    height: 70px;
   }
-    
+
   .logo img {
-      max-height: 40px;
+    max-height: 40px;
   }
-    
+
   nav ul.menu {
-      top: 70px;
+    top: 70px;
   }
-    
+
   .hero {
-      padding: 100px 0 60px;
-      margin-top: 70px;
+    padding: 100px 0 60px;
+    margin-top: 70px;
   }
-  
+
   .hero h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
-  
+
   .turmas-tabs {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .tab-btn {
-      width: 90%;
-      margin-bottom: 10px;
+    width: 90%;
+    margin-bottom: 10px;
   }
-  
+
   .footer-info {
-      grid-template-columns: 1fr;
-      text-align: center;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
-  
+
   .social-links {
-      justify-content: center;
+    justify-content: center;
   }
 }

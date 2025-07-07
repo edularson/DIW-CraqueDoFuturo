@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // --- FUNCIONALIDADE DE ALTERNAR O TEMA (MODO CLARO/ESCURO) ---
     const temaToggleCheckbox = document.getElementById('tema-toggle-checkbox');
     
     function aplicarTema(tema) {
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // --- BOTÃO VOLTAR AO TOPO ---
+    // --- FUNCIONALIDADE DO BOTÃO "VOLTAR AO TOPO" ---
     const btnVoltarTopo = document.getElementById('voltar-topo');
     
     if (btnVoltarTopo) {
@@ -104,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- VALIDAÇÃO DO FORMULÁRIO ---
+    // --- FUNCIONALIDADE DE VALIDAÇÃO DO FORMULÁRIO DE CONTATO ---
     const form = document.getElementById('formulario-contato');
     
     if (form) {
